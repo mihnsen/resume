@@ -1,10 +1,284 @@
 {%
   set resume = {
-    slogan: "Everything you can't imagine",
+    frontend: [
+      {
+        name: "HTML",
+        value: 3
+      },
+      {
+        name: "CSS3",
+        value: 3
+      },
+      {
+        name: "Less",
+        value: 3
+      },
+      {
+        name: "Sass",
+        value: 2
+      },
+      {
+        name: "Adobe Photoshop",
+        value: 2
+      },
+      {
+        name: "Bootstrap, Foundation",
+        value: 3
+      }
+    ],
+    js: [
+      {
+        name: "Javascript",
+        value: 3
+      },
+      {
+        name: "Angular.js",
+        value: 3
+      },
+      {
+        name: "Jquery",
+        value: 3
+      },
+      {
+        name: "Phonegap",
+        value: 3
+      },
+      {
+        name: "Gulp",
+        value: 3
+      },
+      {
+        name: "Bower.io",
+        value: 3
+      }
+    ],
+    php: [
+      {
+        name: "Php",
+        value: 2
+      },
+      {
+        name: "Wordpress from scratch",
+        value: 3
+      },
+      {
+        name: "Zend",
+        value: 2
+      },
+      {
+        name: "Laravel",
+        value: 3
+      },
+      {
+        name: "Symfony",
+        value: 1
+      },
+      {
+        name: "Phalcon PHP",
+        value: 2
+      },
+      {
+        name: "Magento, Joomla, ..",
+        value: 2
+      }
+    ],
+    db: [
+      {
+        name: "Json",
+        value: 3
+      },
+      {
+        name: "MySQL",
+        value: 3
+      },
+      {
+        name: "NoSQL",
+        value: 2
+      },
+      {
+        name: "PostgreSql",
+        value: 2
+      },
+      {
+        name: "Other DBMS",
+        value: 1
+      }
+    ],
+    server: [
+      {
+        name: "NodeJS",
+        value: 3
+      },
+      {
+        name: "Websocket",
+        value: 3
+      },
+      {
+        name: "Socket.io",
+        value: 3
+      },
+      {
+        name: "Python",
+        value: 2
+      },
+      {
+        name: "Other server-side scripts",
+        value: 1
+      }
+    ],
+    tool: [
+      {
+        name: "Git",
+        value: 2
+      },
+      {
+        name: "Linux",
+        value: 3
+      },
+      {
+        name: "Agile/Scrum",
+        value: 2
+      }
+    ],
+    history: [
+      {
+        company: 'Terra',
+        link: 'http://joolist.com/',
+        time: '2011-2014',
+        passed: true,
+        job: 'web developer'
+      },
+      {
+        company: 'Seta international',
+        link: 'http://seta-international.com/',
+        time: '2014-2015',
+        passed: true,
+        job: 'Php developer (fullstack)'
+      },
+      {
+        company: 'Ownego Inc',
+        link: 'http://ownego.com/',
+        time: '2015-now',
+        passed: false,
+        job: 'Fullstack developer'
+      },
+    ],
 
-    title: 'Who we are',
-    subTitle: 'We are justa team full of passion',
-    subHover: 'Passion is our caffeine',
-    desc: "<p>We are a creative digital agency that is passionate about crafting beautiful and usable solutions.</p><p>We let the mind explore new ideas and the brain make it possible.</p><p> A thing should be, and can be done differently, more interestingly and more exceptionally. That's our belief.</p>"
+    projects: [
+      {
+        name: 'Shoot - multi-purpose template',
+        link: 'http://theme.ownego.com/shoot/',
+        task: '',
+        desc: 'Multi-purpose template'
+      },
+      {
+        name: 'Vogliadimare:',
+        link: 'http://demo.ownego.com/website/vogliadimare/',
+        task: 'Frontend, Systempay payment, boats renting',
+        desc: 'Rental boat in Corsica'
+      },
+      {
+        name: 'E.B.I',
+        link: 'http://ebi.novario.net/',
+        task: 'Wordpress site',
+        desc: 'The Employee Benefits Institute of Kansas City'
+      },
+      {
+        name: 'Australian Wine Vintages CMS',
+        link: 'https://play.google.com/store/apps/details?id=com.sanscode.winevintages',
+        task: '',
+        desc: 'Australian Wine Vintages'
+      },
+      {
+        name: 'EBM Api',
+        link: 'https://ebm.messagebroadcast.com/public/hiw_api_document#/',
+        task: '',
+        desc: 'Api for Message Broadcast'
+      },
+    ],
+
+    methodology: [
+      {
+        name: 'Version Control System',
+        value: '<i class="fa fa-git"></i>, svn'
+      },
+      {
+        name: 'Code Hosting',
+        value: '<i class="fa fa-github"></i>, <i class="fa fa-bitbucket"></i>'
+      },
+      {
+        name: 'Agile management?',
+        value: 'Scrum, Kanban'
+      },
+      {
+        name: 'Live stream building',
+        value: 'Gulp, Grunt, Bower'
+      },
+      {
+        name: 'Unit Tests',
+        value: '<i class="fa fa-check"></i>'
+      },
+      {
+        name: 'Build Server',
+        value: 'Jenkins'
+      },
+      {
+        name: 'Issue Tracking Tool',
+        value: 'Jira'
+      },
+      {
+        name: 'Communication Tool',
+        value: '<i class="fa fa-skype"></i> <i class="fa fa-slack"></i>'
+      },
+    ],
+
+    soft: [
+      {
+        name: 'Time Zone',
+        value: 'Asia (GMT+7), <u><i>can work at US Time Zone</i></u>'
+      },
+      {
+        name: 'Languages',
+        value: 'English'
+      },
+      {
+        name: 'Code editor',
+        value: '<b class="danger">Vim</b>'
+      },
+      {
+        name: 'Operating System',
+        value: '<i class="primary fa fa-linux"></i><i class="fa fa-window"></i>'
+      },
+      {
+        name: 'Computer',
+        value: '<i class="fa fa-laptop"></i> W520'
+      },
+      {
+        name: 'Office',
+        value: 'Microsoft Office (Word, PowerPoint, Excel); LibreOffice'
+      },
+      {
+        name: 'Design',
+        value: 'Adobe Photoshop, Fireworks, Sketch, Illustrator'
+      },
+    ],
+
+    others: [
+      'Can work on US Time Zone',
+      'Good logic and quick learning',
+      'Creative and “fastable” idea',
+      'Familiar with working in a 3-6 member team',
+      'High-focus in individual work',
+      'Good at presenting and writing',
+      'Good at problem solving'
+    ],
+
+    self: [
+      '<i class="fa fa-coffee"></i> and code',
+      'Vim lover',
+      'JS lover',
+      'RegExp lover',
+      '<i class="fa fa-laptop"></i> Xmonad desktop'
+    ]
   }
 %}

@@ -1,11 +1,8 @@
+{% import '../macros/skill.html' as skill %}
 {% include '../vars/resume.html' %}
 
 <section class="resume-screen">
   <div class="container">
-    <div class="logo">
-      {% include 'partials/logo.html' %}
-    </div>
-
     <div class="split-bar">
       <span class="danger"></span>
       <span class="primary"></span>
@@ -28,7 +25,15 @@
             <li><i class="fa-li fa fa-lg fa-map-marker"></i>Hanoi, Vietnam</li>
             <li><i class="fa-li fa fa-lg fa-mobile"></i>(+84) 911556248</li>
             <li><i class="fa-li fa fa-envelope-o"></i>minhnt.hut@gmail.com</li>
+            <li><i class="fa-li fa fa-skype"></i>minhnt.hut</li>
           </ul>
+          <div class="clearfix"></div>
+          <div class="msg">
+            <p>
+              I am a web developer based in Hanoi.
+              If you feel interested in my little CV, please get in touch with me via email.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -37,53 +42,12 @@
       <div class="col-sm-6">
         <div class="box box-primary">
           <h4 class="title">work experence</h4>
-          <ul class="column">
-            <li>
-              <div class="work-location">
-                <label><a href="http://joolist.com">terra</a></label>
-                <span class="pull-right"><i class="fa fa-calendar-o"></i> &nbsp; 2011-2014</span>
-              </div>
-              <p class="work-title">- Web developer</p>
-            </li>
-            <li>
-              <div class="work-location">
-                <label><a href="http://seta-international.com/">seta international</a></label>
-                <span class="pull-right"><i class="fa fa-calendar-o"></i> &nbsp; 2014-2015</span>
-              </div>
-              <p class="work-title">- Php developer (fullstack)</p>
-            </li>
-            <li>
-              <div class="work-location">
-                <label><a href="http://ownego.com/">ownego inc</a></label>
-                <span class="pull-right"><i class="fa fa-calendar"></i> &nbsp; 2015-now&nbsp;</span>
-              </div>
-              <p class="work-title">- Fullstack web developer</p>
-            </li>
-          </ul>
+          {{skill.history(resume.history)}}
         </div>
         <div class="box box-danger">
           <h4 class="title">featured projects</h4>
           <ul class="column">
-            <li>
-              <div>
-                <label><a href="http://theme.ownego.com/shoot/">Shoot - multi-purpose template</a></label>
-              </div>
-              <p class="work-title">- Multi-purpose template</p>
-            </li>
-            <li>
-              <div>
-                <label><a href="http://demo.ownego.com/website/vogliadimare/">Vogliadimare:</a></label>
-                Front-end and back-end bulding
-              </div>
-              <p class="work-title">- Rental boat in Corsica</p>
-            </li>
-            <li>
-              <div>
-                <label><a href="http://ebi.novario.net/">E.B.I</a></label>
-                Wordpress site
-              </div>
-              <p class="work-title">- The Employee Benefits Institute of Kansas City</p>
-            </li>
+            {{skill.project(resume.projects)}}
             <li>
               <div>
                 <label>
@@ -93,24 +57,8 @@
                 </label>
                 Pyramid, Kotti, PostgreSQL
               </div>
-              <p class="work-title">- Cremation and funeral service , 100% same,
+              <p class="work-title">- Cremation and funeral service , 2 site 100% same,
               only different data</p>
-            </li>
-            <li>
-              <div>
-                <label>
-                  <a href="https://play.google.com/store/apps/details?id=com.sanscode.winevintages">Australian Wine Vintages CMS</a>
-                </label>
-              </div>
-              <p class="work-title">- Australian Wine Vintages</p>
-            </li>
-            <li>
-              <div>
-                <label>
-                  <a href="https://ebm.messagebroadcast.com/public/hiw_api_document#/">EBM Api</a>
-                </label>
-              </div>
-              <p class="work-title">- Api for Message Broadcast</p>
             </li>
           </ul>
         </div>
@@ -118,28 +66,38 @@
       <div class="col-sm-6">
         <div class="box box-success">
           <h4 class="title">Work Methodology</h4>
-          <ul class="column x2">
-            <li>
-              <div class="method">
-                <span class="method-name">Version Control System</span>
-                <span class="method-value"><i class="fa fa-check"></i> Git, Svn</span>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="box box-flowed">
-          <h4 class="title">General</h4>
+          {{skill.method(resume.methodology)}}
+          <div class="clearfix"></div>
         </div>
         <div class="box box-flowed">
           <h4 class="title">Soft skill</h4>
+          {{skill.method(resume.soft)}}
+          <div class="clearfix"></div>
+        </div>
+        <div class="box box-flowed">
+          <h4 class="title">Self</h4>
+          {{skill.self(resume.self)}}
+          <div class="clearfix"></div>
         </div>
       </div>
     </div>
     <div class="box box-info">
       <h4 class="title">Technologies</h4>
+      {{skill.technology(resume.frontend)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.js)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.php)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.db)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.server)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.tool)}}
     </div>
     <div class="box">
       <h4 class="title">Other</h4>
+      {{skill.other(resume.others)}}
     </div>
     <div class="box footer">
       {% include '../layouts/components/copyright.html' %}

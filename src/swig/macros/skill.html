@@ -1,0 +1,80 @@
+{% macro technology(skills) %}
+<ul class="column x3">
+  {% for skill in skills %}
+    <li>
+      <div class="method">
+        <span class="method-name">{{skill.name}}</span>
+        <span class="method-value">
+          {% set x= [1,2,3] %}
+          {% for i in x %}
+            {% if i <= skill.value %}
+            <i class="fa fa-star"></i>
+            {% else %}
+            <i class="fa fa-star-o"></i>
+            {% endif %}
+          {% endfor %}
+        </span>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro history(jobs) %}
+<ul class="column">
+  {% for job in jobs %}
+    <li>
+      <div class="work-location">
+        <label><a href="{{job.link}}">{{ job.company }}</a></label>
+        <span class="pull-right">
+          {% if job.passed %}
+          <i class="fa fa-calendar-o"></i> &nbsp; {{ job.time }}
+          {% else %}
+          <i class="fa fa-calendar"></i> &nbsp; {{ job.time }}&nbsp;{% endif %}
+        </span>
+      </div>
+      <p class="work-title">- {{ job.job }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro project(projects) %}
+  {% for prj in projects %}
+    <li>
+      <div>
+        <label><a href="{{prj.link}}">{{ prj.name }}</a></label> {{ prj.task }}
+      </div>
+      <p class="work-title">- {{ prj.desc }}</p>
+    </li>
+  {% endfor %}
+{% endmacro %}
+
+{% macro method(methods) %}
+<ul class="column">
+  {% for method in methods %}
+    <li>
+      <div class="method">
+        <span class="method-name">{{ method.name }}</span>
+        <span class="method-value">{% autoescape false %}{{ method.value }}{% endautoescape %}</span>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro other(skills) %}
+<ul class="column x3">
+  {% for skill in skills %}
+    <li>{{ skill }}</li>
+  {% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro self(skills) %}
+<ul class="column x3">
+  {% for skill in skills %}
+    <li>{% autoescape false %}{{ skill }}{% endautoescape %}</li>
+  {% endfor %}
+</ul>
+{% endmacro %}
