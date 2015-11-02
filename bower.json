@@ -1,0 +1,16 @@
+{
+  "name": "minhnt-resume",
+  "version": "1.0.0",
+  "homepage": "http://ownego.com",
+  "authors": [
+    "MinhNT <minhnt.hut@gmail.com>"
+  ],
+  "private": true,
+  "description": "minh's resume",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~1.11",
+    "bootstrap": "3.*",
+    "font-awesome": "*"
+  }
+}
