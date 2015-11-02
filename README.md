@@ -1,2 +1,0 @@
-# resume
-minh's resume

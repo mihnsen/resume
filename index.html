@@ -1,43 +1,282 @@
-<html>
 
-<script>
-  var x = 1600;
-  var odd = true;
-  var arr = [];
-  var count = 0;
 
-  // Create arr
-  for (i = 1; i <= x; ++i) {
-    arr.push(i);
-  }
-  console.log('counting...');
-  while (arr.length > 1) {
-    count++;
-    console.log('count: ' + count);
 
-    odd = (arr.length % 2) ? false : true;
 
-    for(var e = 0; e < arr.length; e++) {
-      if(!((e+1) % 2)) {
-        arr[e] = false;
-      }
-    }
 
-    var newArr = [];
-    if(!odd && arr.length > 2) {
-      newArr.push(0);
-    }
-    for(var i = 0; i < arr.length; i++) {
-      if(arr[i]) newArr.push(arr[i]);
-    }
-    arr = newArr;
 
-    if(arr.length < 3) {
-      var k = !arr[0] ? 1 : 0;
-      console.log('Result: ' + arr[k]);
-      break;
-    }
-  } // end while
-</script>
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Meta Data -->
+  <meta charset="utf-8">
+  <title>Minh Nguyen Tien - Fullstack web developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Favicons -->
+<link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="./favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="./favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="./favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="./favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="./favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="./favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="./favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="./favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="./favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="./favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="./favicons/manifest.json">
+<link rel="shortcut icon" href="./favicons/favicon.ico?v=1.1">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="./favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="./favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="./assets/img/logo.jpg" />
+  <meta property="og:description" content="Ownego member." />
+  <meta property="og:url" content="http://minhnguyentien.com" />
+  <meta property="og:site_name" content="Minh Nguyen Tien" />
+  <meta property="fb:admins" content="1216147695" />
+
+  <meta name="description" content="Fullstack web developer">
+  <meta name="keywords" content="minhnt, minh nguyen, minh nguyen tien, ownego, creative, agency, web solutions, web design, web development, mobile, applications, web service">
+
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./vendors/font-awesome/css/font-awesome.min.css" />
+  <!-- build:csslib ./assets/css/libs.css -->
+  <link rel="stylesheet" href="./assets/css/libs.css" />
+  <!-- endbuild -->
+  <!-- build:cssmains ./assets/css/main.css -->
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <!-- endbuild -->
+  <!-- build:cssanim ./assets/css/animations.css -->
+  <link rel="stylesheet" href="./assets/css/animations.css" />
+  <!-- endbuild -->
+  
+
+</head>
+
+<body>
+  <noscript>
+  <div style="position: fixed; top: 0px; left: 0px; z-index: 99999;
+              height: 100%; width: 100%; background-color: #FFFFFF;">
+    Your browser does not support JavaScript!
+  </div>
+</noscript>
+
+  <main>
+    
+<!-- Section 1 -->
+
+
+
+<section class="resume-screen">
+  <div class="container">
+    <div class="logo">
+      <h2>Resume</h2>
+
+    </div>
+
+    <div class="split-bar">
+      <span class="danger"></span>
+      <span class="primary"></span>
+      <span class="info"></span>
+      <span class="success"></span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box">
+          <h1 class="author">Nguyen Tien Minh</h1>
+          <h4 class="job-title">Fullstack web developer</h4>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box">
+          <ul class="fa-ul list-contact">
+            <li><i class="fa-li fa fa-lg fa-map-marker"></i>Hanoi, Vietnam</li>
+            <li><i class="fa-li fa fa-lg fa-mobile"></i>(+84) 911556248</li>
+            <li><i class="fa-li fa fa-envelope-o"></i>minhnt.hut@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-primary">
+          <h4 class="title">work experence</h4>
+          <ul class="column">
+            <li>
+              <div class="work-location">
+                <label><a href="http://joolist.com">terra</a></label>
+                <span class="pull-right"><i class="fa fa-calendar-o"></i> &nbsp; 2011-2014</span>
+              </div>
+              <p class="work-title">- Web developer</p>
+            </li>
+            <li>
+              <div class="work-location">
+                <label><a href="http://seta-international.com/">seta international</a></label>
+                <span class="pull-right"><i class="fa fa-calendar-o"></i> &nbsp; 2014-2015</span>
+              </div>
+              <p class="work-title">- Php developer (fullstack)</p>
+            </li>
+            <li>
+              <div class="work-location">
+                <label><a href="http://ownego.com/">ownego inc</a></label>
+                <span class="pull-right"><i class="fa fa-calendar"></i> &nbsp; 2015-now&nbsp;</span>
+              </div>
+              <p class="work-title">- Fullstack web developer</p>
+            </li>
+          </ul>
+        </div>
+        <div class="box box-danger">
+          <h4 class="title">featured projects</h4>
+          <ul class="column">
+            <li>
+              <div>
+                <label><a href="http://theme.ownego.com/shoot/">Shoot - multi-purpose template</a></label>
+              </div>
+              <p class="work-title">- Multi-purpose template</p>
+            </li>
+            <li>
+              <div>
+                <label><a href="http://demo.ownego.com/website/vogliadimare/">Vogliadimare:</a></label>
+                Front-end and back-end bulding
+              </div>
+              <p class="work-title">- Rental boat in Corsica</p>
+            </li>
+            <li>
+              <div>
+                <label><a href="http://ebi.novario.net/">E.B.I</a></label>
+                Wordpress site
+              </div>
+              <p class="work-title">- The Employee Benefits Institute of Kansas City</p>
+            </li>
+            <li>
+              <div>
+                <label>
+                  <a href="http://leanneodea.com.au/">Leanne O'Dea</a>
+                  and
+                  <a href="http://bowraodea.com.au/">Bowra & O'Dea:</a>
+                </label>
+                Pyramid, Kotti, PostgreSQL
+              </div>
+              <p class="work-title">- Cremation and funeral service , 100% same,
+              only different data</p>
+            </li>
+            <li>
+              <div>
+                <label>
+                  <a href="https://play.google.com/store/apps/details?id=com.sanscode.winevintages">Australian Wine Vintages CMS</a>
+                </label>
+              </div>
+              <p class="work-title">- Australian Wine Vintages</p>
+            </li>
+            <li>
+              <div>
+                <label>
+                  <a href="https://ebm.messagebroadcast.com/public/hiw_api_document#/">EBM Api</a>
+                </label>
+              </div>
+              <p class="work-title">- Api for Message Broadcast</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-success">
+          <h4 class="title">Work Methodology</h4>
+          <ul class="column x2">
+            <li>
+              <div class="method">
+                <span class="method-name">Version Control System</span>
+                <span class="method-value"><i class="fa fa-check"></i> Git, Svn</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="box box-flowed">
+          <h4 class="title">General</h4>
+        </div>
+        <div class="box box-flowed">
+          <h4 class="title">Soft skill</h4>
+        </div>
+      </div>
+    </div>
+    <div class="box box-info">
+      <h4 class="title">Technologies</h4>
+    </div>
+    <div class="box">
+      <h4 class="title">Other</h4>
+    </div>
+    <div class="box footer">
+      <div class="copyright">
+  <p>Thanks for reading!</p>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+  </main>
+
+  <!-- fixed elements -->
+  
+
+  <div class="social-bar">
+  
+  <a href="https://github.com/oeminhnt" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="View sources on Github">
+    <i class="fa-github"></i>
+  </a>
+  
+  <a href="https://www.facebook.com/minhnt.hut" target="_blank" class="social-icon" data-toggle="tooltip" data-placement="bottom" title="Follow us">
+    <i class="fa-facebook"></i>
+  </a>
+  
+</div>
+
+
+  
+  <!-- build:js ./assets/js/libs.js -->
+  <script src="./vendors/jquery/dist/jquery.js"></script>
+  <!-- endbuild -->
+  <script src="./assets/js/oe.main.js"></script>
+  <script src="./assets/js/oe.console.js"></script>
+  
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-59799793-4', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
 </html>
