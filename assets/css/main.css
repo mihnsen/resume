@@ -103,7 +103,6 @@ body {
   font-weight: 300;
   font-size: 14px;
   background-color: #f0f2f3;
-  overflow: -moz-scrollbars-none;
 }
 @media only screen and (max-width: 767px) {
   body {
