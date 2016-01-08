@@ -26,8 +26,8 @@
 
   {% block styles %}
   <!-- Main CSS -->
-  <link rel="stylesheet" href="{{ vendorDir }}/font-awesome/css/font-awesome.min.css" />
   <!-- build:csslib ./assets/css/libs.css -->
+  <link rel="stylesheet" href="{{ vendorDir }}/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="{{ assetDir }}/css/libs.css" />
   <!-- endbuild -->
   <!-- build:cssmains ./assets/css/main.css -->
@@ -52,11 +52,6 @@
   {% include 'components/social-bar.html' %}
 
   {% block scripts %}
-  <!-- build:js ./assets/js/libs.js -->
-  <script src="{{ vendorDir }}/jquery/dist/jquery.js"></script>
-  <!-- endbuild -->
-  <script src="{{ assetDir }}/js/oe.main.js"></script>
-  <script src="{{ assetDir }}/js/oe.console.js"></script>
   {% endblock %}
 
   <script>

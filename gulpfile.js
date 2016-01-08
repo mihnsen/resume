@@ -24,6 +24,15 @@ var config = {
         indentChar: ' ',
         noBlankLine: true
       },
+      usemin: {
+        csslib: [minifyCss(), 'concat'],
+        cssmains: [minifyCss(), 'concat'],
+        cssanim: [minifyCss(), 'concat'],
+        /*
+        js: [uglify()],
+        iejs: [uglify()]
+        */
+      }
     },
     min: 'dist_min'
   },
@@ -94,6 +103,9 @@ gulp.task('dev:watch', function() {
 });
 
 
+
+
+
 gulp.task('dist:dev', ['dev:swig', 'dev:less'], function() {
 
   // DEV
@@ -112,10 +124,9 @@ gulp.task('dist:dev', ['dev:swig', 'dev:less'], function() {
       .pipe(gulp.dest(config.app.dist.dev));
 
     gulp
-      .src(['src/*.html'])
-//      .src([config.app.src+'*.html'])
+      .src([config.app.src+'/*.html'])
       .pipe(tidyHtml(config.app.dist.indent))
-      .pipe(usemin())
+      .pipe(usemin(config.app.dist.usemin))
       .pipe(gulp.dest(config.app.dist.dev));
 });
 
@@ -158,6 +169,7 @@ gulp.task('dist:production', function() {
       '!'+config.app.dist.dev+'/vendors'])
     .pipe(gulp.dest(config.app.dist.production));
 })
+
 /**
  * Production:Compile
  */
