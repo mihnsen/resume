@@ -1,1 +1,1 @@
-console.log("Welcome - minhnt.hut@gmail.com");
+console.log("Welcome -- contact me at: minhnt.hut@gmail.com");
